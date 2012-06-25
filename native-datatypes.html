@@ -11,7 +11,7 @@ body{counter-reset:h1 2}
 <meta name=viewport content='initial-scale=1.0'>
 <form action=http://www.google.com/cse><div><input type=hidden name=cx value=014021643941856155761:l5eihuescdw><input type=hidden name=ie value=UTF-8>&nbsp;<input type=search name=q size=25 placeholder="powered by Google&trade;">&nbsp;<input type=submit name=root value=Search></div></form>
 <p>Você está aqui: <a href=index.html>Home</a> <span class=u>‣</span> <a href=table-of-contents.html#native-datatypes>Dive Into Python 3</a> <span class=u>‣</span>
-<p id=level>Nível de dificuldade: <span class=u title=beginner>♦♦♢♢♢</span>
+<p id=level>Nível de dificuldade: <span class=u title=iniciante>♦♦♢♢♢</span>
 <h1>Tipos de Dados nativos</h1>
 <blockquote class=q>
 <p><span class=u>❝</span> Wonder is the foundation of all philosophy, inquiry its progress, ignorance its end. <span class=u>❞</span><br>— Michel de Montaigne
@@ -19,19 +19,19 @@ body{counter-reset:h1 2}
 </blockquote>
 <p id=toc>&nbsp;
 <h2 id=divingin>Diving In</h2>
-<p class=f>Datatypes. Set aside <a href=your-first-python-program.html>your first Python program</a> for just a minute, and let’s talk about datatypes. em Python, <a href=your-first-python-program.html#declaringfunctions>todo valor tem um tipo</a>, mas você não precisa declarar o tipo das variáveis. Como isso funciona? Baseado no valor de cada variável, o Python descobre qual o tipo e o define internamente.
+<p class=f>Datatypes. Ponha ao seu lado <a href=your-first-python-program.html>seu primeiro programa Python</a> por apenas um minuto, e vamos falar sobre tipos de dados. em Python, <a href=your-first-python-program.html#declaringfunctions>todo valor tem um tipo</a>, mas você não precisa declarar o tipo das variáveis. Como isso funciona? Baseado no valor de cada variável, o Python descobre qual o tipo e o define internamente.
 <p>Python tem muitos tipos nativos. Aqui estão os mais importantes:
 <ol>
 <li><b>Booleans</b> são <code>True</code> ou <code>False</code>.
 </li><li><b>Numbers</b> podem ser inteiros (<code>1</code> e <code>2</code>), números de ponto flutuante (<code>1.1</code> e <code>1.2</code>), frações (<code>1/2</code> e <code>2/3</code>), ou então <a href=http://en.wikipedia.org/wiki/Complex_number>números complexos</a>.
 </li><li><b>Strings</b> são sequencias de caracteres unicode, <i>e.g.</i> um documento <abbr>HTML</abbr>.
-</li><li><b>Bytes</b> and <b>arrays de bytes</b>, <i>e.g.</i> uma <abbr>JPEG</abbr> imagem.
+</li><li><b>Bytes</b> and <b>arrays de bytes</b>, <i>e.g.</i> uma imagem <abbr>JPEG</abbr>.
 </li><li><b>Lists</b> são sequencias de valores ordenados.
 </li><li><b>Tuples</b> são uma sequencia de valores imutáveis e ordenados.
 </li><li><b>Sets</b> são conjuntos de valores não ordenados.
 </li><li><b>Dictionaries</b> são conjuntos de pares chave-valor não ordenados.
 </li></ol>
-<p>Claro, existem outros tipos além desses. <a href=your-first-python-program.html#everythingisanobject>Tudo é um objeto</a> em Python, então estes tipos são como <i>modulos</i>, <i>funções</i>, <i>classes</i>, <i>métodos</i>, <i>arquivos</i>, e até mesmo <i>código compilado</i>. Você já deve ter visto algo sobre: <a href=your-first-python-program.html#runningscripts>modulos tem nomes</a>, <a href=your-first-python-program.html#docstrings>funções tem <code>docstrings</code></a>, <i class=baa>&amp;</i>c. Você aprenderá sobre classes em <a href=iterators.html>Classes <i class=baa>&amp;</i> Iteradores</a>, e sobre arquivos em <a href=files.html>Files</a>.
+<p>Claro, existem outros tipos além desses. <a href=your-first-python-program.html#everythingisanobject>Tudo é um objeto</a> em Python, então esses tipos são como <i>modulos</i>, <i>funções</i>, <i>classes</i>, <i>métodos</i>, <i>arquivos</i>, e até mesmo <i>código compilado</i>. Você já deve ter visto que: <a href=your-first-python-program.html#runningscripts>modulos tem nomes</a>, <a href=your-first-python-program.html#docstrings>funções tem <code>docstrings</code></a>, <i class=baa>&amp;</i>c. Você aprenderá sobre classes em <a href=iterators.html>Classes <i class=baa>&amp;</i> Iteradores</a>, e sobre arquivos em <a href=files.html>Files</a>.
 <p>Strings e bytes são tão importantes&nbsp;—&nbsp;e tão complicados&nbsp;—&nbsp;que eles tem seu próprio capítulo. Vamos ver os outros primeiro.
 <p class=a>⁂
 
@@ -52,7 +52,7 @@ body{counter-reset:h1 2}
 <samp class=p>&gt;&gt;&gt; </samp><kbd class=pp>size = -1</kbd>
 <samp class=p>&gt;&gt;&gt; </samp><kbd class=pp>size &lt; 0</kbd>
 <samp class=pp>True</samp></pre>
-<p>Devido a questões de legado deixados pelo Python 2, booleanos podem ser tratados como números.  <code>True</code> é <code>1</code>; <code>False</code> é 0.
+<p>Devido a questões de legado deixado pelo Python 2, booleanos podem ser tratados como números.  <code>True</code> é <code>1</code>; <code>False</code> é 0.
 <pre class='nd screen'>
 <samp class=p>&gt;&gt;&gt; </samp><kbd class=pp>True + True</kbd>
 <samp class=pp>2</samp>
