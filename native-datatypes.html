@@ -68,9 +68,8 @@ ZeroDivisionError: int division or modulo by zero</samp></pre>
 
 <p class=a>⁂
 
-<h2 id=numbers>Numbers</h2>
-<p>Numbers are awesome. There are so many to choose from. Python supports both <dfn>integer</dfn>s and <dfn>floating point</dfn> numbers. There’s no type declaration to distinguish them; Python tells them apart by the presence or absence of a <dfn>decimal</dfn> point.
-
+<h2 id=numbers>Números</h2>
+<p>Números são impressionantes. Há muitos para escolher. Python suporta ambos, <dfn>inteiro</dfn>s e números de <dfn>ponto flutuante</dfn>. Não há declaração de tipo para destigui-los; Python distingue eles pela presença ou ausencia de um ponto <dfn>decimal</dfn>.
 <pre class=screen>
 <a><samp class=p>&gt;&gt;&gt; </samp><kbd class=pp>type(1)</kbd>                 <span class=u>①</span></a>
 <samp class=pp>&lt;class 'int'&gt;</samp>
@@ -83,18 +82,13 @@ ZeroDivisionError: int division or modulo by zero</samp></pre>
 <samp class=p>&gt;&gt;&gt; </samp><kbd class=pp>type(2.0)</kbd>
 <samp class=pp>&lt;class 'float'&gt;</samp></pre>
 <ol>
-<li>You can use the <code>type()</code> function to check the type of any value or variable. As you might expect, <code>1</code> is an <code>int</code>.
-
-</li><li>Similarly, you can use the <code>isinstance()</code> function to check whether a value or variable is of a given type.
-
-</li><li>Adding an <code>int</code> to an <code>int</code> yields an <code>int</code>.
-
-</li><li>Adding an <code>int</code> to a <code>float</code> yields a <code>float</code>. Python coerces the <code>int</code> into a <code>float</code> to perform the addition, then returns a <code>float</code> as the result.
-
+<li>Você pode usar a função <code>type()</code> para verificar o tipo de qualquer valor ou variável. Como você poderia esperar, <code>1</code> é um <code>int</code>.
+</li><li>Similarmente, você pode usar a função <code>isinstance()</code> para verificar se o valor ou variável é de um determinado tipo de dado.
+</li><li>Somando um <code>int</code> com um <code>int</code> obtemos um <code>int</code>.
+</li><li>Somando um <code>int</code> com um <code>float</code> obtemos um <code>float</code>. Python converte o <code>int</code> em um <code>float</code> para realizar a adição, então retorna um <code>float</code> como resultado.
 </li></ol>
-<h3 id=number-coercion>Coercing Integers To Floats And Vice-Versa</h3>
-<p>As you just saw, some operators (like addition) will coerce integers to floating point numbers as needed. You can also coerce them by yourself.
-
+<h3 id=number-coercion>Convertendo Inteiros para Floats e Vice-Versa</h3>
+<p>Como você já viu, alguns operadores (como adição) converterão inteiros em ponto fluantes quando necessário. Você também pode convertê-los por conta própria.
 <pre class=screen>
 <a><samp class=p>&gt;&gt;&gt; </samp><kbd class=pp>float(2)</kbd>                <span class=u>①</span></a>
 <samp class=pp>2.0</samp>
@@ -109,26 +103,18 @@ ZeroDivisionError: int division or modulo by zero</samp></pre>
 <a><samp class=p>&gt;&gt;&gt; </samp><kbd class=pp>type(1000000000000000)</kbd>  <span class=u>⑥</span></a>
 <samp class=pp>&lt;class 'int'&gt;</samp></pre>
 <ol>
-<li>You can explicitly coerce an <code>int</code> to a <code>float</code> by calling the <code>float()</code> function.
-
-</li><li>Unsurprisingly, you can also coerce a <code>float</code> to an <code>int</code> by calling <code>int()</code>.
-
-</li><li>The <code>int()</code> function will truncate, not round.
-
-</li><li>The <code>int()</code> function truncates negative numbers towards 0. It’s a true truncate function, not a floor function.
-
-</li><li>Floating point numbers are accurate to 15 decimal places.
-
-</li><li>Integers can be arbitrarily large.
-
+<li>Você pode explicitamente converter um <code>int</code> para um <code>float</code> chamando a função <code>float()</code>.
+</li><li>Obviamente, você também pode converter um <code>float</code> para um <code>int</code> camando a função<code>int()</code>.
+</li><li>A função <code>int()</code> irá truncar, não arredondar.
+</li><li>A função <code>int()</code> trunca números negativos em direção a 0. It’s a true truncate function, not a floor function.
+</li><li>Números de ponto flutuante tem precisção de 15 casas decimais.
+</li><li>Inteiros podem ser arbitrariamente grandes.
 </li></ol>
 <blockquote class='note compare python2'>
-<p><span class=u>☞</span>Python 2 had separate types for <code>int</code> and <code>long</code>. The <code>int</code> datatype was limited by <code>sys.maxint</code>, which varied by platform but was usually <code>2<sup>32</sup>-1</code>. Python 3 has just one integer type, which behaves mostly like the old <code>long</code> type from Python 2. See <a href=http://www.python.org/dev/peps/pep-0237><abbr>PEP</abbr> 237</a> for details.
-
+<p><span class=u>☞</span>Python 2 possui tipos separados para <code>int</code> e <code>long</code>. O tipo <code>int</code> era limitado por <code>sys.maxint</code>, quem variava por plataforma, mas normalmente era <code>2<sup>32</sup>-1</code>. Python 3 tem apenas um tipo inteiro, que se comporta geralmente como o antigo tipo <code>long</code> do Python 2. Veja a <a href=http://www.python.org/dev/peps/pep-0237><abbr>PEP</abbr> 237</a> para mais detalhes.
 </blockquote>
-<h3 id=common-numerical-operations>Common Numerical Operations</h3>
-<p>You can do all kinds of things with numbers.
-
+<h3 id=common-numerical-operations>Operações Numericas Comuns</h3>
+<p>Você pode fazer qualquer coisa com números.
 <pre class=screen>
 <a><samp class=p>&gt;&gt;&gt; </samp><kbd class=pp>11 / 2</kbd>      <span class=u>①</span></a>
 <samp class=pp>5.5</samp>
@@ -144,10 +130,8 @@ ZeroDivisionError: int division or modulo by zero</samp></pre>
 <samp class=pp>1</samp>
 </pre>
 <ol>
-<li>The <code>/</code> operator performs floating point division. It returns a <code>float</code> even if both the numerator and denominator are <code>int</code>s.
-
-</li><li>The <code>//</code> operator performs a quirky kind of integer division. When the result is positive, you can think of it as truncating (not rounding) to 0 decimal places, but be careful with that.
-
+<li>O operador <code>/</code> executa a divisão de ponto flutuante. Isso retorna um <code>float</code> mesmo se o numerador e denominador forem <code>int</code>s.
+</li><li>O operador <code>//</code> executa um tipo peculiar de divisão inteira. When the result is positive, you can think of it as truncating (not rounding) to 0 decimal places, but be careful with that.
 </li><li>When integer-dividing negative numbers, the <code>//</code> operator rounds “up” to the nearest integer. Mathematically speaking, it’s rounding “down” since <code>−6</code> is less than <code>−5</code>, but it could trip you up if you were expecting it to truncate to <code>−5</code>.
 
 </li><li>The <code>//</code> operator doesn’t always return an integer. If either the numerator or denominator is a <code>float</code>, it will still round to the nearest integer, but the actual return value will be a <code>float</code>.
